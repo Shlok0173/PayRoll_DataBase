@@ -1,12 +1,7 @@
------------------------------ Uc5 -------------------------
-insert into employee_payroll(name,salay,start_date) values('Virat',100000.00,'2023-04-05'),('Rohit',350000.00,'2035-04-02'),('Dhoni',450000.00,'2023-05-06');
-select  salay  as "Salary" from employee_payroll where name ='virat' limit 2;
-select * from employee_payroll where cast('2023-04-05' As Date) AND  Date (now());
-
-------------------------------------- Uc6 -------------------------------
-Select * from employee_payroll;
-alter table employee_payroll add gender varchar(10);
-UPDATE employee_payroll set gender = 'M' where name ='Virat' or name ='Rohit' or name='Dhoni';
-select * from employee_payroll;
 
 
+----------------------------------------------------- Uc 7 --------------------------------------
+
+insert into employee_payroll(name,salary,start_date,gender) values('R Mishra',29300.00,'2022-04-02','F'),('Sidhi',388893.00,'2021-04-02','F'),('Mona',28900.00,'2020-03-02','F');
+--------------- select  Sum(salary) As "Salary Result" from employee_payroll where gender='F' order by gender -------; 
+select avg(salary) AS "Average Salary",sum(salary) AS " Sum Salary", max(salary) AS " Maximum Salary", min(salary) AS "Minmum" ,count(salary)AS " Count Salary" from employee_payroll where gender='F';
