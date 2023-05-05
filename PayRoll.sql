@@ -1,10 +1,4 @@
-show databases;
-
---------------- Uc1---------------
-use payroll_service;
-show databases;
-
-------------------------- Uc2 -----------------------------
-create table employee_payroll(id int(11) auto_increment not null , name varchar(200) not null , salary double not null,start_date date not null);
-desc employee_payroll;
-show databases;
+----------------------------- Uc3 -------------------------
+SELECT * FROM payroll_service.employee_payroll;
+insert into employee_payroll(name,salay,start_date) values('Virat',100000.00,'2023-04-05'),('Rohit',350000.00,'2035-04-02'),('Dhoni',450000.00,'2023-05-06');
+select * from employee_payroll;
